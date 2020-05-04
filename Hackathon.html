@@ -1,0 +1,180 @@
+<!-- heyyyyy  -->
+<html lang="en-TT">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<title>Insult Generator</title>
+  <body>
+        <section>
+
+	<div>
+    <p class="header" > Tell Me </br> Something <a class="compliment" href="HackathonCompliments.html"> Compliment Generator </a>
+    <a class="insult" href="Hackathon.html"> Insult Generator </a></p>
+	</div>
+	</section>
+
+	<p class="description"> A mild roast session for your convenience </p>
+ 	 <section>
+     
+    <!-- code for button start--> 
+ 
+	  
+       <!-- the insult is shown here-->
+    
+    <div class="box">
+		<div class="wb"> <p id="insultDisplay"></p> </div>
+	
+		<div class="divbutton"> <button onclick= "newInsult()">Click Me</button></div>
+    </div>
+     
+     <script>
+        var numOfInsults = 21
+        var insults = new ArrayOfInsults (numOfInsults)
+
+        insults[0] = "Simp."
+        insults[1] = "You call that a click? Woowwww"
+        insults[2] = "Cheer up champ, at least you got your thumbs"
+        insults[3] = "Huh, you want more of this? Masochist much?"
+        insults[4] = "sighhhhh."
+        insults[5] = '<a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Here, listen to this and leave me alone. <a>'
+		insults[6] = "You're getting pretty annoying now..."
+		insults[7] = "The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly but gets faster each minute after you hear this signal bodeboop. A single lap should be completed every time you hear this sound. ding Remember to run in a straight line and run as long as possible."
+        insults[8] = "Your face makes onions cry."
+		insults[9] = "We're in the middle of a pandemic and you're sitting here getting insulted by an HTML page? Wow that's sad."
+		insults[10] = "Imagine that there's probably a 12 year old on Tik Tok out there that makes more money than you."
+		insults[11] = "Hey you! I can smell you from here go shower dude it's been days"
+		insults[12] = "If I ever said anything to offend you, it was purely intentional. :3"
+		insults[13] = "Some people are smart...others are talented...you're neither."
+		insults[14] = "Most people live and learn. Apparently you just live."
+		insults[15] = "Don't feel bad. A lot of people have no talent!"
+		insults[16] = "Wash your hands ya nasty...we're in a pandemic"
+		insults[17] = "This is probably the most ayone has spoken to you in weeks ahahahahaha"
+		insults[18] = "Press the power button lemme see something"
+		insults[19] = "lIkE cOmMeNt AnD sUbScRiBe-"
+		insults[20] = "We're done here."
+	
+
+
+	   function ArrayOfInsults(size){
+         this.length = size
+         for (var i=1; i<=size; i++){
+          this[i] = null
+         }
+          return this
+        }
+          function newInsult(){
+            var randomNum = Math.floor(Math.random() * (numOfInsults))
+        document.getElementById("insultDisplay").innerHTML = insults[randomNum]
+      }
+  	</script>
+     
+     
+     
+  </section>
+
+
+    
+    <style>
+            body{
+     	 background-color: #cedfff;
+      font-family:monospace;
+      }
+		
+		.header{
+        font-size: 30px;
+      	font-family:monospace;
+        color: #000000;
+				padding-left: 20px;
+        }
+      
+        .insult, .compliment, .song{
+        font-size: 20px;
+        font-family:monospace;
+        color: #000000;
+        padding-right: 20px;
+		    padding-bottom: 15px;
+        }
+        
+        .compliment{
+          float: right;
+          padding-right: 10px;
+				  text-decoration: none;
+        }
+        
+        .insult{
+          float: right;
+          padding-right: 50px;
+		  		text-decoration: none;
+        }
+		
+		.description{
+		font-size: 20px;
+        font-family:monospace;
+        color: #000000;
+		text-align: center;
+        padding-top: 20px;
+		}
+		
+        
+   .box{
+	 position: absolute;
+	 top: 60%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 500px;
+	 height: 200px;
+	 padding: 40px;
+	 padding-top: 40px;
+	 background-color: #ffd0d8; /*light orange*/
+	 border-radius: 10px;
+	 box-shadow: 0 15px 25px rgba(0,0,0, .5);
+        }
+		
+	.wb{
+		padding: 10px 20px 10px 20px;
+	}
+      
+	.divbutton{
+		padding-left:150px;
+	}
+      
+      button{
+		  background-color:#cedfff; /*light blue*/
+      color: #111111;
+      width: 200px;
+      height: 50px;
+		  border-radius: 5px;
+		  padding: 10px 20px;
+		  font-size: 25px;
+		  font-weight: bold;
+		  position: absolute;
+		  right: 75;
+		  bottom: 50px;
+		  font-family:monospace;
+      }
+
+	#wordbox {
+    display: block;
+    width: 450px;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    color: #black;
+}    
+      
+    a .song{
+		text-decoration: underline;
+		}
+      
+		a:hover{
+		color: #2906c2; /*dark blue*/
+		font-size: 22px;
+		transition: 0.3s; 
+		}
+    </style>
+      
+  </body>    
+</html>
+

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-TT">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compliment Generator</title>
+  <body>
+    <section>
+
+	<div>
+    <p class="header" > Tell Me </br> Something <a class="compliment" href="HackathonCompliments.html"> Compliment Generator </a>
+    <a class="insult" href="Hackathon.html"> Insult Generator </a></p>
+	</div>
+	</section>
+
+	<p class="description"> Something to cheer you up! </p>
+ 	 <section>
+     
+    <!-- code for button start--> 
+ 
+	  
+       <!-- the insult is shown here-->
+    
+    <div class="box">
+		<div class="wb"> <p class="display" id="insultDisplay"></p> </div>
+	
+		<div class="divbutton"> <button onclick= "newInsult()">Click Me</button></div>
+    </div>
+     
+     <script>
+        var numOfInsults = 7
+        var insults = new ArrayOfInsults (numOfInsults)
+
+        
+        insults[0] = "I bet you sweat glitter!"
+        insults[1] = "You're a candle in the darkness"
+        insults[2] = "You're more fun than bubble wrap"
+        insults[3] = "Is that your picture next to charming in the dictionary?"
+        insults[4] = "You're inspiring"
+        insults[5] = "*hugs*"
+		insults[6] = "You should be proud of yourself"
+		insults[7] = " Keep staying indoors and flatten that curve!"
+		insults[8] = "Your face makes onions cry."
+		insults[9] = "We're in the middle of a pandemic and you're sitting here getting compliments from an HTML page? You're a great example to others, everyone should stay inside."
+		insults[10] = "Imagine that there's probably a 12 year old Tik Tok-er out there that makes more money than you."
+		insults[11] = "How is it that you always look so great, even if you're in ratty pajamas?"
+		insults[12] = "Has anyone ever told you that you have great posture?"
+		insults[13] = "Be the best version of yourself possible!"
+		insults[14] = "On a scale from 1 to 10, you're an 11"
+		insults[15] = "The people you love are lucky to have you in their lives"
+		insults[16] = "You're stringer than you think...keep going!"
+		insults[17] = "This is a sign to go dye your hair you'd look good with it"
+		insults[18] = "You work hard"
+		insults[19] = "Hey you, SMILE!!"
+		insults[20] = "Thank you for being you "
+	
+
+		
+        function ArrayOfInsults(size){
+         this.length = size
+         for (var i=1; i<=size; i++){
+          this[i] = null
+         }
+          return this
+        }
+          function newInsult(){
+            var randomNum = Math.floor(Math.random() * (numOfInsults))
+        document.getElementById("insultDisplay").innerHTML = insults[randomNum]
+      }
+  	</script>
+     
+  </section>
+
+
+    <style>
+            body{
+     	 background-color: #ffd0f0; /*light pink*/
+		 font-family:monospace;
+
+      }
+		
+		.header{
+        font-size: 30px;
+        font-family:monospace;
+        color: #000000;
+		padding-left: 20px;
+        }
+      
+        .insult, .compliment{
+        font-size: 20px;
+        font-family:monospace;
+        color: #000000;
+		padding-right: 20px;
+		padding-bottom: 15px;
+        }
+        
+        .compliment{
+          float: right;
+          padding-right: 10px;
+		  text-decoration: none;
+		  
+        }
+        
+        .insult{
+          float: right;
+		  text-decoration: none;
+		  
+        }
+		
+		.description{
+		font-size: 20px;
+        font-family:monospace;
+        color: #000000;
+		text-align: center;
+        padding-top: 20px;
+		}
+        
+     .box{
+	 position: absolute;
+	 top: 60%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 500px;
+	 height: 200px;
+	 padding: 40px;
+	 padding-top: 40px;
+	 background-color: #ffd0d8; /*light orange*/
+	 border-radius: 10px;
+	 box-shadow: 0 15px 25px rgba(0,0,0, .5);
+        }
+		
+	.wb{
+		padding: 10px 20px 10px 20px;
+	}
+	   .divbutton{
+		padding-left:150px;
+	}
+        button{
+		  background-color:#ffd0f0; /*light pink*/
+          color: #111111;
+          width: 200px;
+          height: 50px;
+		  border-radius: 5px;
+		  padding: 10px 20px;
+		  font-size: 25px;
+		  font-weight: bold;
+		  position: absolute;
+		  right: 75;
+		  bottom: 50px;
+		  font-family:monospace;
+        }
+
+	#wordbox {
+    display: block;
+    width: 450px;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    color: #black;
+}     
+  
+.display{
+font-size: 25px;
+text-align: center;
+}
+
+a .song{
+	text-decoration: underline;
+		} 
+		
+a:hover{
+	color: #d6037e; /*dark pink*/
+	font-size: 22px;
+	transition: 0.3s; 
+		}
+		
+		
+		
+    </style>
+      
+  </body>    
+</html>
